@@ -1,0 +1,11 @@
+identity.json
+contacts.json
+
+*.card.json
+card*.json
+
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
