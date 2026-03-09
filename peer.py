@@ -86,10 +86,9 @@ class PeerNode:
             self.state = State.CLOSED
             print("Connection closed")
             if self.writer:
-                self.writer.close()
                 try:
-                    await self.writer.wait_closed()
-                except Exception:
+                    self.writer.close()
+                except OSError:
                     pass
 
     async def send_raw(self, msg: dict):
